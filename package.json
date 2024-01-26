@@ -1,6 +1,6 @@
 {
   "name": "@affine/monorepo",
-  "version": "0.12.0",
+  "version": "4.0.0",
   "private": true,
   "author": "toeverything",
   "license": "MIT",
@@ -54,8 +54,8 @@
     ]
   },
   "devDependencies": {
-    "@affine-test/kit": "workspace:*",
-    "@affine/cli": "workspace:*",
+    "@affine-test/kit": "4.0.0",
+    "@affine/cli": "4.0.0",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@faker-js/faker": "^8.3.1",
@@ -65,8 +65,8 @@
     "@playwright/test": "^1.41.0",
     "@taplo/cli": "^0.5.2",
     "@testing-library/react": "^14.1.2",
-    "@toeverything/infra": "workspace:*",
-    "@types/affine__env": "workspace:*",
+    "@toeverything/infra": "4.0.0",
+    "@types/affine__env": "4.0.0",
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.9.3",
     "@typescript-eslint/eslint-plugin": "^6.13.1",

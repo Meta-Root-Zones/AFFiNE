@@ -1,7 +1,7 @@
 {
   "name": "@affine/server",
   "private": true,
-  "version": "0.12.0",
+  "version": "4.0.0",
   "description": "Affine Node.js server",
   "type": "module",
   "bin": {
@@ -91,7 +91,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@affine-test/kit": "workspace:*",
+    "@affine-test/kit": "4.0.0",
     "@affine/storage": "workspace:*",
     "@napi-rs/image": "^1.7.0",
     "@nestjs/testing": "^10.2.10",

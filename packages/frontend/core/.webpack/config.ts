@@ -81,9 +81,9 @@ export const getPublicPath = (buildFlags: BuildFlags) => {
   }
 
   if (BUILD_TYPE === 'canary') {
-    return `https://dev.affineassets.com/`;
+    return process.env.CANARY_PUBLIC_PATH;
   } else if (BUILD_TYPE === 'beta' || BUILD_TYPE === 'stable') {
-    return `https://prod.affineassets.com/`;
+    return process.env.PROD_PUBLIC_PATH;
   }
   return publicPath;
 };

@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "verbatimModuleSyntax": true,
-    // Classification follows https://www.typescriptlang.org/tsconfig
-    // Type Checking
     "strict": true,
     "exactOptionalPropertyTypes": false,
     "noFallthroughCasesInSwitch": true,
@@ -15,25 +13,18 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "useUnknownInCatchVariables": true,
-    // Modules
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": ["affine__env"],
-    // Emit
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    // skip type emit for @internal types
-    // "stripInternal": true,
-    // JavaScript Support
     "allowJs": false,
     "checkJs": false,
-    // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    // Language and Environment
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
     "lib": ["ESNext", "DOM"],
@@ -41,50 +32,45 @@
     "useDefineForClassFields": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    // Projects
     "composite": true,
     "incremental": true,
-    // Completeness
-    "skipLibCheck": true, // skip all type checks for .d.ts files
+    "skipLibCheck": true,
     "paths": {
-      "@affine/core/*": ["./packages/frontend/core/src/*"],
+      "@affine-test/fixtures/*": ["./tests/fixtures/*"],
+      "@affine-test/kit/*": ["./tests/kit/*"],
       "@affine/cli/*": ["./tools/cli/src/*"],
-      "@affine/server/*": ["./packages/backend/server/src/*"],
       "@affine/component": ["./packages/frontend/component/src/index"],
       "@affine/component/*": [
         "./packages/frontend/component/src/components/*/index",
         "./packages/frontend/component/src/components/*"
       ],
-      "@affine/i18n": ["./packages/frontend/i18n/src"],
-      "@affine/i18n/hooks": ["./packages/frontend/i18n/src/i18n-generated"],
+      "@affine/core/*": ["./packages/frontend/core/src/*"],
       "@affine/debug": ["./packages/common/debug"],
+      "@affine/electron/*": ["./packages/frontend/electron/src/*"],
+      "@affine/electron/scripts/*": ["./packages/frontend/electron/scripts/*"],
       "@affine/env": ["./packages/common/env/src"],
       "@affine/env/*": ["./packages/common/env/src/*"],
-      "@affine/workspace/*": ["./packages/common/workspace/src/*"],
-      "@affine/workspace-impl/*": ["./packages/frontend/workspace-impl/src/*"],
       "@affine/graphql": ["./packages/frontend/graphql/src"],
-      "@affine/electron/scripts/*": ["./packages/frontend/electron/scripts/*"],
-      "@affine-test/kit/*": ["./tests/kit/*"],
-      "@affine-test/fixtures/*": ["./tests/fixtures/*"],
-      "@toeverything/y-indexeddb": ["./packages/common/y-indexeddb/src"],
-      "@toeverything/infra/*": ["./packages/common/infra/src/*"],
+      "@affine/i18n": ["./packages/frontend/i18n/src"],
+      "@affine/i18n/hooks": ["./packages/frontend/i18n/src/i18n-generated"],
       "@affine/native": ["./packages/frontend/native/index.d.ts"],
       "@affine/native/*": ["./packages/frontend/native/*"],
+      "@affine/server/*": ["./packages/backend/server/src/*"],
       "@affine/storage": ["./packages/backend/storage/index.d.ts"],
-      // Development only
-      "@affine/electron/*": ["./packages/frontend/electron/src/*"]
+      "@affine/workspace-impl/*": ["./packages/frontend/workspace-impl/src/*"],
+      "@affine/workspace/*": ["./packages/common/workspace/src/*"],
+      "@toeverything/infra/*": ["./packages/common/infra/src/*"],
+      "@toeverything/y-indexeddb": ["./packages/common/y-indexeddb/src"]
     }
   },
   "include": [],
   "references": [
-    // Backend
     {
       "path": "./packages/backend/server"
     },
     {
       "path": "./packages/backend/server/tests"
     },
-    // Frontend
     {
       "path": "./packages/frontend/component"
     },
@@ -106,7 +92,6 @@
     {
       "path": "./packages/frontend/workspace-impl"
     },
-    // Common
     {
       "path": "./packages/common/debug"
     },
@@ -122,11 +107,9 @@
     {
       "path": "./packages/common/y-indexeddb"
     },
-    // Tools
     {
       "path": "./tools/cli"
     },
-    // Tests
     {
       "path": "./tests/kit"
     },
@@ -157,7 +140,6 @@
     {
       "path": "./tests/affine-legacy/0.6.1-beta.1"
     },
-    // Others
     {
       "path": "./tsconfig.node.json"
     }

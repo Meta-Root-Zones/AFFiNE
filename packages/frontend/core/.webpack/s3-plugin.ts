@@ -9,7 +9,6 @@ import type { Compiler, WebpackPluginInstance } from 'webpack';
 export const R2_BUCKET =
   process.env.R2_BUCKET! ??
   (process.env.BUILD_TYPE === 'canary' ? 'assets-dev' : 'assets-prod');
-
 export class WebpackS3Plugin implements WebpackPluginInstance {
   private readonly s3 = new S3Client({
     region: 'auto',
@@ -19,7 +18,6 @@ export class WebpackS3Plugin implements WebpackPluginInstance {
       secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
     },
   });
-
   apply(compiler: Compiler) {
     compiler.hooks.assetEmitted.tapPromise(
       'WebpackS3Plugin',
@@ -34,6 +32,7 @@ export class WebpackS3Plugin implements WebpackPluginInstance {
           Bucket: R2_BUCKET,
           Key: asset,
         };
+        console.log(R2_BUCKET);
         const contentType = lookup(asset);
         if (contentType) {
           putObjectCommandOptions.ContentType = contentType;

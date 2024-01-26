@@ -31,7 +31,7 @@ export function getRuntimeConfig(buildFlags: BuildFlags): RuntimeConfig {
       enableEnhanceShareMode: false,
       enablePayment: true,
       enablePageHistory: true,
-      serverUrlPrefix: 'https://app.affine.pro',
+      serverUrlPrefix: process.env.SERVER_PREFIX_URL as string,
       editorFlags,
       appVersion: packageJson.version,
       editorVersion: packageJson.dependencies['@blocksuite/presets'],
