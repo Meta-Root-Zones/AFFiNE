@@ -40,7 +40,7 @@
     "typecheck": "tsc -b tsconfig.json --diagnostics",
     "postinstall": "node ./scripts/check-version.mjs && yarn i18n-codegen gen && yarn husky install",
     "prepare": "husky",
-    "heroku-postbuild": "yarn build:server"
+    "heroku-postbuild": "yarn build:storage && build:server"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown --cache",
