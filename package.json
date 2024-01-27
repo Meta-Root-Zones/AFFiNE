@@ -1,6 +1,6 @@
 {
   "name": "@affine/monorepo",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "private": true,
   "author": "toeverything",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "dev": "dev-core",
     "dev:electron": "yarn workspace @affine/electron dev",
     "build": "yarn nx build @affine/core",
+    "build:server": "yarn nx build @affine/server",
     "build:electron": "yarn nx build @affine/electron",
     "build:storage": "yarn nx run-many -t build -p @affine/storage",
     "build:storybook": "yarn nx build @affine/storybook",
@@ -38,7 +39,8 @@
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc -b tsconfig.json --diagnostics",
     "postinstall": "node ./scripts/check-version.mjs && yarn i18n-codegen gen && yarn husky install",
-    "prepare": "husky"
+    "prepare": "husky",
+    "heroku-postbuild": "yarn build-server"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown --cache",
@@ -54,8 +56,8 @@
     ]
   },
   "devDependencies": {
-    "@affine-test/kit": "4.0.0",
-    "@affine/cli": "4.0.0",
+    "@affine-test/kit": "5.0.0",
+    "@affine/cli": "5.0.0",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@faker-js/faker": "^8.3.1",
@@ -65,8 +67,8 @@
     "@playwright/test": "^1.41.0",
     "@taplo/cli": "^0.5.2",
     "@testing-library/react": "^14.1.2",
-    "@toeverything/infra": "4.0.0",
-    "@types/affine__env": "4.0.0",
+    "@toeverything/infra": "5.0.0",
+    "@types/affine__env": "5.0.0",
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.9.3",
     "@typescript-eslint/eslint-plugin": "^6.13.1",

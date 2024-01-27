@@ -10,9 +10,9 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@affine/debug": "4.0.0",
-    "@affine/env": "4.0.0",
-    "@affine/templates": "4.0.0",
+    "@affine/debug": "5.0.0",
+    "@affine/env": "5.0.0",
+    "@affine/templates": "5.0.0",
     "@blocksuite/blocks": "0.12.0-nightly-202401260550-8a560a1",
     "@blocksuite/global": "0.12.0-nightly-202401260550-8a560a1",
     "@blocksuite/store": "0.12.0-nightly-202401260550-8a560a1",
@@ -24,7 +24,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@affine-test/fixtures": "4.0.0",
+    "@affine-test/fixtures": "5.0.0",
     "@affine/templates": "workspace:*",
     "@blocksuite/lit": "0.12.0-nightly-202401260550-8a560a1",
     "@blocksuite/presets": "0.12.0-nightly-202401260550-8a560a1",
@@ -63,5 +63,5 @@
       "optional": true
     }
   },
-  "version": "4.0.0"
+  "version": "5.0.0"
 }

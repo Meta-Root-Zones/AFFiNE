@@ -7,9 +7,9 @@
     "test": "test-storybook"
   },
   "dependencies": {
-    "@affine/component": "4.0.0",
-    "@affine/i18n": "4.0.0",
-    "@affine/workspace-impl": "4.0.0",
+    "@affine/component": "5.0.0",
+    "@affine/i18n": "5.0.0",
+    "@affine/workspace-impl": "5.0.0",
     "@dnd-kit/sortable": "^8.0.0",
     "@storybook/jest": "^0.2.3",
     "@storybook/testing-library": "^0.2.2",
@@ -60,5 +60,5 @@
     "@blocksuite/presets": "*",
     "@blocksuite/store": "*"
   },
-  "version": "4.0.0"
+  "version": "5.0.0"
 }

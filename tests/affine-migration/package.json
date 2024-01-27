@@ -5,9 +5,9 @@
     "e2e": "yarn playwright test"
   },
   "devDependencies": {
-    "@affine-test/fixtures": "4.0.0",
-    "@affine-test/kit": "4.0.0",
+    "@affine-test/fixtures": "5.0.0",
+    "@affine-test/kit": "5.0.0",
     "@playwright/test": "^1.41.0"
   },
-  "version": "4.0.0"
+  "version": "5.0.0"
 }
