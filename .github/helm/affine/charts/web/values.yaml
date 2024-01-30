@@ -1,18 +1,18 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/toeverything/affine-front
+  repository: ghcr.io/meta-root-zones/affine-front
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: ''
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+nameOverride: ''
+fullnameOverride: ''
 
 serviceAccount:
   create: true
   annotations: {}
-  name: "affine-web"
+  name: 'affine-web'
 
 podAnnotations: {}
 
