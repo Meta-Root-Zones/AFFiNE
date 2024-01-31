@@ -1,6 +1,6 @@
 services:
   affine:
-    image: ghcr.io/meta-root-zones/affine-graphql:canary
+    image: ghcr.io/toeverything/affine-graphql:beta
     container_name: affine_selfhosted
     command:
       ['sh', '-c', 'node ./scripts/self-host-predeploy && node ./dist/index.js']

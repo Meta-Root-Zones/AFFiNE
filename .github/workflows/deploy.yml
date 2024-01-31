@@ -65,6 +65,7 @@ jobs:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
           PERFSEE_TOKEN: ${{ secrets.PERFSEE_TOKEN }}
           PUBLIC_PATH: 'https://dev2.metaroot.zone/'
+          SERVER_PREFIX: 'https://alt.metaroot.zone/'
       - name: Upload core artifact
         uses: actions/upload-artifact@v4
         with:
