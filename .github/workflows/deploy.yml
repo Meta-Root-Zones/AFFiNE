@@ -54,6 +54,8 @@ jobs:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
           PERFSEE_TOKEN: ${{ secrets.PERFSEE_TOKEN }}
           MIXPANEL_TOKEN: ${{ secrets.MIXPANEL_TOKEN }}
+          PUBLIC_PATH: 'https://dev2.metaroot.zone/'
+          SERVER_PREFIX: 'https://alt.metaroot.zone/'
       - name: Upload web artifact
         uses: actions/upload-artifact@v4
         with:
@@ -102,7 +104,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           provenance: true
           file: .github/deployment/front/Dockerfile
-          tags: ghcr.io/toeverything/affine-front:${{env.RELEASE_FLAVOR}}-${{ env.GIT_SHORT_HASH }},ghcr.io/toeverything/affine-front:${{env.RELEASE_FLAVOR}}
+          tags: ghcr.io/meta-root-zones/affine-front:${{env.RELEASE_FLAVOR}}-${{ env.GIT_SHORT_HASH }},ghcr.io/meta-root-zones/affine-front:${{env.RELEASE_FLAVOR}}
 
   deploy:
     name: Deploy to cluster
